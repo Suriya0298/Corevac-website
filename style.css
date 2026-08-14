@@ -31,9 +31,10 @@ body {
   margin: auto;
 }
 
-/* =========================
+
+/* =========================================================
    HEADER
-========================= */
+========================================================= */
 
 .site-header {
   position: sticky;
@@ -51,7 +52,8 @@ body {
   gap: 30px;
 }
 
-/* CoreVac logo */
+/* CoreVac Logo */
+
 .brand {
   display: flex;
   align-items: center;
@@ -66,7 +68,9 @@ body {
   display: block;
 }
 
+
 /* Navigation */
+
 .nav {
   display: flex;
   gap: 27px;
@@ -101,6 +105,9 @@ body {
   background: var(--red);
 }
 
+
+/* Mobile Menu Button */
+
 .menu-btn {
   display: none;
   background: none;
@@ -109,9 +116,10 @@ body {
   cursor: pointer;
 }
 
-/* =========================
+
+/* =========================================================
    HERO
-========================= */
+========================================================= */
 
 .hero {
   min-height: 720px;
@@ -151,11 +159,11 @@ body {
   top: -100px;
   width: 620px;
   height: 620px;
-  border: 1px solid rgba(255,255,255,0.09);
+  border: 1px solid rgba(255, 255, 255, 0.09);
   border-radius: 50%;
   box-shadow:
-    0 0 0 70px rgba(255,255,255,0.02),
-    0 0 0 140px rgba(255,255,255,0.02);
+    0 0 0 70px rgba(255, 255, 255, 0.02),
+    0 0 0 140px rgba(255, 255, 255, 0.02);
 }
 
 .hero-content {
@@ -201,6 +209,9 @@ body {
   margin: 34px 0 60px;
 }
 
+
+/* Buttons */
+
 .btn {
   display: inline-block;
   text-decoration: none;
@@ -223,12 +234,12 @@ body {
 }
 
 .btn.ghost {
-  border: 1px solid rgba(255,255,255,0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   color: #fff;
 }
 
 .btn.ghost:hover {
-  background: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .btn.light {
@@ -237,17 +248,20 @@ body {
   margin-top: 8px;
 }
 
+
+/* Trust Strip */
+
 .trust-strip {
   display: flex;
   gap: 0;
-  border-top: 1px solid rgba(255,255,255,0.18);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
   max-width: 850px;
 }
 
 .trust-strip div {
   padding: 22px 35px 0 0;
   margin-right: 35px;
-  border-right: 1px solid rgba(255,255,255,0.18);
+  border-right: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .trust-strip div:last-child {
@@ -264,9 +278,10 @@ body {
   color: #afc0cf;
 }
 
-/* =========================
-   SECTIONS
-========================= */
+
+/* =========================================================
+   GENERAL SECTIONS
+========================================================= */
 
 .section {
   padding: 105px 0;
@@ -302,9 +317,10 @@ body {
   color: #b8c8d6;
 }
 
-/* =========================
+
+/* =========================================================
    ABOUT
-========================= */
+========================================================= */
 
 .two-col {
   display: grid;
@@ -341,9 +357,10 @@ body {
   text-decoration: none;
 }
 
-/* =========================
+
+/* =========================================================
    PRODUCTS
-========================= */
+========================================================= */
 
 .product-grid {
   display: grid;
@@ -362,7 +379,7 @@ body {
 
 .product-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
 .product-card.featured {
@@ -400,6 +417,9 @@ body {
   padding-left: 20px;
   color: #d8e4ec;
 }
+
+
+/* Product Specifications */
 
 .spec-section {
   margin-top: 70px;
@@ -439,9 +459,10 @@ body {
   color: #c8d6e1;
 }
 
-/* =========================
+
+/* =========================================================
    INDUSTRIES
-========================= */
+========================================================= */
 
 .industry-grid {
   display: grid;
@@ -466,9 +487,10 @@ body {
   transform: translateY(-2px);
 }
 
-/* =========================
+
+/* =========================================================
    SERVICES
-========================= */
+========================================================= */
 
 .service-section {
   background: #f7f9fb;
@@ -500,9 +522,10 @@ body {
   color: var(--muted);
 }
 
-/* =========================
+
+/* =========================================================
    CONTACT
-========================= */
+========================================================= */
 
 .contact-section {
   background: #0a1e32;
@@ -520,9 +543,10 @@ body {
   color: #b9c9d7;
 }
 
-/* =========================
+
+/* =========================================================
    CONTACT INFORMATION
-========================= */
+========================================================= */
 
 .contact-details {
   display: grid;
@@ -531,20 +555,7 @@ body {
 }
 
 .contact-item {
-  display: grid;
-  grid-template-columns: 105px 1fr;
-  column-gap: 18px;
-  align-items: start;
-}
-
-.contact-item span {
-  color: #8fa5b7;
-  font-size: 12px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  line-height: 1.5;
-  padding-top: 3px;
+  display: block;
 }
 
 .contact-item strong {
@@ -552,11 +563,15 @@ body {
   color: #fff;
   font-size: 18px;
   font-weight: 700;
-  line-height: 1.55;
+  line-height: 1.5;
 }
 
-.contact-item strong br {
+.contact-item small {
   display: block;
+  color: #8fa5b7;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 2px;
 }
 
 .contact-details a {
@@ -571,99 +586,60 @@ body {
 }
 
 
-/* =========================
-   MOBILE CONTACT
-========================= */
-
-@media (max-width: 500px) {
-
-  .contact-details {
-    gap: 22px;
-    margin-top: 28px;
-  }
-
-  .contact-item {
-    grid-template-columns: 1fr;
-    row-gap: 3px;
-  }
-
-  .contact-item span {
-    padding-top: 0;
-  }
-
-  .contact-item strong {
-    font-size: 17px;
-    line-height: 1.5;
-  }
-
-  .contact-details a {
-    font-size: 17px;
-  }
-  /* =========================
-   MOBILE CONTACT
-========================= */
-
-@media (max-width: 500px) {
-
-  .contact-details {
-    gap: 22px;
-    margin-top: 28px;
-  }
-
-  .contact-item {
-    grid-template-columns: 1fr;
-    row-gap: 3px;
-  }
-
-  .contact-item span {
-    padding-top: 0;
-  }
-
-  .contact-item strong {
-    font-size: 17px;
-    line-height: 1.5;
-  }
-
-  .contact-details a {
-    font-size: 17px;
-  }
-}
-
-/* =========================
+/* =========================================================
    CONTACT FORM
-========================= */
+========================================================= */
 
 .contact-form {
+  display: block;
+  width: 100%;
   background: #fff;
   padding: 32px;
   border-radius: 10px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 .contact-form input,
 .contact-form textarea {
+  display: block;
   width: 100%;
+  box-sizing: border-box;
   padding: 14px;
-  margin-bottom: 12px;
+  margin: 0 0 12px 0;
   border: 1px solid #d6e0e8;
   border-radius: 5px;
   font: inherit;
   color: var(--text);
+  background: #fff;
+}
+
+.contact-form textarea {
+  min-height: 150px;
+  resize: vertical;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
   border-color: var(--red);
-  box-shadow: 0 0 0 2px rgba(215,25,32,0.08);
+  box-shadow: 0 0 0 2px rgba(215, 25, 32, 0.08);
 }
 
 .contact-form .btn {
+  display: block;
   width: 100%;
+  box-sizing: border-box;
 }
+
+
+/* =========================================================
+   WHATSAPP BUTTON
+========================================================= */
 
 .whatsapp {
   display: block;
+  width: 100%;
+  box-sizing: border-box;
   text-align: center;
   margin-top: 12px;
   background: #168c55;
@@ -678,9 +654,10 @@ body {
   background: #117345;
 }
 
-/* =========================
+
+/* =========================================================
    FOOTER
-========================= */
+========================================================= */
 
 .footer {
   background: #050f19;
@@ -696,7 +673,9 @@ body {
   font-size: 12px;
 }
 
-/* CoreVac logo */
+
+/* CoreVac Footer Logo */
+
 .footer img {
   width: 125px;
   height: auto;
@@ -717,9 +696,10 @@ body {
   color: #fff;
 }
 
-/* =========================
+
+/* =========================================================
    FLOATING WHATSAPP
-========================= */
+========================================================= */
 
 .floating-whatsapp {
   position: fixed;
@@ -735,7 +715,7 @@ body {
   justify-content: center;
   text-decoration: none;
   font-weight: 900;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
   z-index: 200;
   transition: 0.2s ease;
 }
@@ -745,11 +725,14 @@ body {
   transform: scale(1.05);
 }
 
-/* =========================
-   TABLET / MOBILE
-========================= */
+
+/* =========================================================
+   TABLET
+========================================================= */
 
 @media (max-width: 850px) {
+
+  /* Navigation */
 
   .nav {
     display: none;
@@ -773,6 +756,9 @@ body {
     max-height: 58px;
   }
 
+
+  /* General layouts */
+
   .two-col,
   .product-grid,
   .contact-grid {
@@ -784,6 +770,9 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 
+
+  /* Hero */
+
   .hero {
     min-height: 650px;
   }
@@ -791,6 +780,9 @@ body {
   .hero-content {
     padding: 80px 0;
   }
+
+
+  /* Trust strip */
 
   .trust-strip {
     flex-wrap: wrap;
@@ -800,10 +792,16 @@ body {
     margin-bottom: 10px;
   }
 
+
+  /* Footer */
+
   .footer-wrap {
     flex-direction: column;
     align-items: flex-start;
   }
+
+
+  /* Mobile navigation dropdown */
 
   .menu-open .nav {
     display: flex;
@@ -816,7 +814,7 @@ body {
     flex-direction: column;
     border-bottom: 1px solid var(--line);
     margin: 0;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
   }
 
   .menu-open .menu-btn {
@@ -828,20 +826,19 @@ body {
     font-size: 30px;
   }
 
-  /* Contact information on tablet */
+
+  /* Contact */
+
   .contact-details {
     gap: 20px;
   }
 
-  .contact-item {
-    grid-template-columns: 100px 1fr;
-    column-gap: 16px;
-  }
 }
 
-/* =========================
+
+/* =========================================================
    SMALL PHONES
-========================= */
+========================================================= */
 
 @media (max-width: 500px) {
 
@@ -853,9 +850,15 @@ body {
     padding: 75px 0;
   }
 
+
+  /* Industries */
+
   .industry-grid {
     grid-template-columns: 1fr;
   }
+
+
+  /* Hero */
 
   .hero h1 {
     font-size: 43px;
@@ -870,27 +873,19 @@ body {
     display: none;
   }
 
+
+  /* Products */
+
   .product-card {
     padding: 25px;
   }
 
-  .contact-form {
-    padding: 22px;
-  }
 
-  /* Contact information on mobile */
+  /* Contact */
+
   .contact-details {
     gap: 20px;
     margin-top: 28px;
-  }
-
-  .contact-item {
-    grid-template-columns: 1fr;
-    gap: 4px;
-  }
-
-  .contact-item span {
-    padding-top: 0;
   }
 
   .contact-item strong {
@@ -898,16 +893,31 @@ body {
     line-height: 1.5;
   }
 
+  .contact-item small {
+    font-size: 12px;
+  }
+
   .contact-details a {
     font-size: 17px;
   }
+
+  .contact-form {
+    padding: 22px;
+  }
+
+
+  /* Footer */
 
   .footer {
     padding: 30px 0;
   }
 
+
+  /* Floating WhatsApp */
+
   .floating-whatsapp {
     right: 15px;
     bottom: 15px;
   }
+
 }
