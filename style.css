@@ -278,6 +278,154 @@ body {
   color: #afc0cf;
 }
 
+/* =========================================================
+   HERO PRODUCT SHOWCASE
+========================================================= */
+
+.hero-products {
+  position: absolute;
+  right: 4%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46%;
+  height: 620px;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: none;
+}
+
+.product-showcase {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Product image */
+
+#heroProductImage {
+  width: 75%;
+  max-width: 520px;
+  max-height: 440px;
+
+  object-fit: contain;
+
+  opacity: 0.50;
+
+  filter:
+    drop-shadow(0 20px 35px rgba(0,0,0,0.22));
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+
+  transform: scale(1);
+}
+
+/* Fade-out state */
+
+#heroProductImage.product-fade-out {
+  opacity: 0;
+  transform: scale(0.94);
+}
+
+/* Product name */
+
+.hero-product-name {
+  margin-top: 18px;
+
+  padding: 8px 18px;
+
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 30px;
+
+  background: rgba(7,26,45,0.45);
+
+  color: rgba(255,255,255,0.85);
+
+  font-size: 14px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  backdrop-filter: blur(5px);
+
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+
+/* =========================================================
+   HERO - MAKE SURE CONTENT STAYS ABOVE IMAGE
+========================================================= */
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .hero-products {
+    right: 0;
+    width: 48%;
+    opacity: 0.8;
+  }
+
+  #heroProductImage {
+    width: 80%;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 850px) {
+
+  .hero-products {
+    width: 100%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    transform: none;
+
+    opacity: 0.20;
+  }
+
+  #heroProductImage {
+    width: 70%;
+    max-width: 420px;
+  }
+
+  .hero-product-name {
+    font-size: 12px;
+  }
+
+  .hero-content {
+    z-index: 4;
+  }
+
+}
+
 
 /* =========================================================
    GENERAL SECTIONS
