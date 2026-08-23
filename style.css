@@ -2060,3 +2060,28 @@ textarea {
     width: 105px;
   }
 }
+/* =========================================================
+   FOOTER LOGO - REMOVE WHITE BOX
+   ========================================================= */
+
+.footer-logo {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo img {
+  width: 120px;
+  height: auto;
+  display: block;
+  background: transparent;
+  object-fit: contain;
+}
+
+@media (max-width: 700px) {
+  .footer-logo img {
+    width: 105px;
+  }
+}
