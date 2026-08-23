@@ -919,53 +919,122 @@ textarea {
    ========================================================= */
 
 .footer {
+  width: 100%;
   background: #061522;
   color: #b8c8d5;
-  padding: 28px 0;
+  padding: 30px 0;
+  border-top: 1px solid rgba(255,255,255,0.05);
 }
 
 .footer-wrap {
-  display: flex;
+  width: min(1160px, 92%);
+  min-height: 70px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
   align-items: center;
-  justify-content: space-between;
+
   gap: 30px;
 }
 
-/*
-   IMPORTANT:
-   The footer itself must NOT create a white box.
-*/
+
+/* =========================================================
+   FOOTER LOGO
+   ========================================================= */
 
 .footer-logo {
-  display: flex !important;
+  display: flex;
   align-items: center;
   justify-content: flex-start;
 
+  width: auto;
+  height: auto;
+
+  margin: 0;
+  padding: 0;
+
   background: transparent !important;
   border: 0 !important;
   border-radius: 0 !important;
-  padding: 0 !important;
-  margin: 0 !important;
+  box-shadow: none !important;
 }
 
 .footer-logo img {
-  width: 120px !important;
-  height: auto !important;
+  display: block;
 
-  display: block !important;
+  width: 125px;
+  height: auto;
+
+  max-width: 125px;
+  max-height: 60px;
+
+  margin: 0;
+  padding: 0;
 
   background: transparent !important;
   border: 0 !important;
   border-radius: 0 !important;
-  padding: 0 !important;
-  margin: 0 !important;
+  box-shadow: none !important;
 
   object-fit: contain;
 }
 
-.footer p {
+
+/* =========================================================
+   COPYRIGHT
+   ========================================================= */
+
+.footer-wrap p {
   margin: 0;
+
+  color: rgba(255,255,255,0.75);
+
   font-size: 13px;
+
+  text-align: right;
+}
+
+
+/* =========================================================
+   FOOTER MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .footer {
+    padding: 25px 0;
+  }
+
+  .footer-wrap {
+    grid-template-columns: 1fr;
+
+    min-height: auto;
+
+    justify-items: center;
+
+    text-align: center;
+
+    gap: 16px;
+  }
+
+  .footer-logo {
+    justify-content: center;
+  }
+
+  .footer-logo img {
+    width: 115px;
+    max-width: 115px;
+    max-height: 55px;
+  }
+
+  .footer-wrap p {
+    text-align: center;
+    font-size: 12px;
+  }
+
 }
 
 /* =========================================================
