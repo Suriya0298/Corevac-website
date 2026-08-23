@@ -105,10 +105,19 @@
       <div class="section-kicker">PRODUCTS</div>
       <h2>Two product categories. One trusted CoreVac experience.</h2>
       <p class="section-intro">Choose the category that matches your requirement.</p>
+
       <div class="category-grid">
+
         <a class="category-card" href="products/industrial-vacuum-pumps.html">
           <div class="category-image industrial-preview">
-            <img src="assets/Products/vr-205l.png" alt="Industrial ELGi vacuum pump">
+            <div class="category-carousel industrial-carousel" aria-label="Industrial vacuum pump product images">
+              <img class="carousel-slide is-active"
+                   src="assets/vacuum-showcase/vr-d-enhanced.png"
+                   alt="ELGi VR-D dry rotary vane vacuum pump">
+              <img class="carousel-slide"
+                   src="assets/vacuum-showcase/vr-l-enhanced.png"
+                   alt="ELGi VR-L lubricated rotary vane vacuum pump">
+            </div>
           </div>
           <div class="category-content">
             <span class="product-badge">INDUSTRIAL</span>
@@ -116,10 +125,22 @@
             <p>ELGi VR-D and VR-L rotary vane vacuum pump solutions for industrial applications.</p>
           </div>
         </a>
+
         <a class="category-card" href="products/domestic-agri-pumps.html">
           <div class="category-image domestic-preview">
-            <div class="category-placeholder">
-              <span>COREVAC</span><strong>Domestic &amp; Agri</strong><small>Pump Solutions</small>
+            <div class="category-carousel domestic-carousel" aria-label="Domestic and agricultural pump product images">
+              <img class="carousel-slide is-active"
+                   src="assets/domestic-agri/openwell-pump.png"
+                   alt="CoreVac Openwell Pump">
+              <img class="carousel-slide"
+                   src="assets/domestic-agri/monoblock-pump.png"
+                   alt="CoreVac Monoblock Pump">
+              <img class="carousel-slide"
+                   src="assets/domestic-agri/self-priming-pump.png"
+                   alt="CoreVac Self Priming Pump">
+              <img class="carousel-slide"
+                   src="assets/domestic-agri/agri-pump.png"
+                   alt="CoreVac Agricultural Pump">
             </div>
           </div>
           <div class="category-content">
@@ -128,6 +149,7 @@
             <p>CoreVac pumping solutions for homes, farms, irrigation and water transfer applications.</p>
           </div>
         </a>
+
       </div>
     </div>
   </section>
@@ -202,5 +224,23 @@
 <a class="floating-whatsapp" href="https://wa.me/919790641881?text=Hello%20CoreVac%2C%20I%20have%20an%20enquiry" target="_blank" rel="noopener" aria-label="WhatsApp CoreVac">WA</a>
 
 <script src="script.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".category-carousel").forEach(function (carousel) {
+    const slides = carousel.querySelectorAll(".carousel-slide");
+    if (slides.length < 2) return;
+
+    let currentIndex = 0;
+
+    setInterval(function () {
+      slides[currentIndex].classList.remove("is-active");
+      currentIndex = (currentIndex + 1) % slides.length;
+      slides[currentIndex].classList.add("is-active");
+    }, 3000);
+  });
+});
+</script>
+
 </body>
 </html>
