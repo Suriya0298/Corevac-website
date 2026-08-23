@@ -2026,3 +2026,37 @@ textarea {
   }
 
 }
+/* =========================================================
+   COREVAC FOOTER LOGO - FINAL PRESENTATION
+   ========================================================= */
+
+.footer-wrap > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.footer-wrap > div:first-child img {
+  width: 120px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  background: transparent;
+}
+
+/* Keep the footer clean and compact */
+.footer {
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+.footer-wrap {
+  align-items: center;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .footer-wrap > div:first-child img {
+    width: 105px;
+  }
+}
