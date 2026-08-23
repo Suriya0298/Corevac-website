@@ -842,3 +842,88 @@
   }
 
 }
+/* =========================================================
+   FOOTER - CLEAN COREVAC BRANDING
+   ========================================================= */
+
+.footer {
+  background: #061525;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 30px 0;
+}
+
+.footer-wrap {
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* Remove any white box / card styling around the logo */
+.footer-brand {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+/* Footer logo */
+.footer-brand img {
+  display: block;
+  width: 125px;
+  height: auto;
+  max-height: 55px;
+  object-fit: contain;
+}
+
+/* Copyright */
+.footer-wrap p {
+  margin: 0;
+  color: rgba(255,255,255,0.75);
+  font-size: 13px;
+  text-align: center;
+}
+
+/* Email */
+.footer-email {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer-email:hover {
+  color: #ef1b23;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+
+  .footer {
+    padding: 25px 0;
+  }
+
+  .footer-wrap {
+    min-height: auto;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .footer-brand img {
+    width: 115px;
+  }
+
+  .footer-wrap p,
+  .footer-email {
+    font-size: 12px;
+  }
+}
