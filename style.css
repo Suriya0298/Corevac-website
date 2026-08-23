@@ -4,11 +4,6 @@
    MAIN PAGE CSS
    ========================================================= */
 
-
-/* =========================================================
-   ROOT
-   ========================================================= */
-
 :root {
   --navy: #071a2d;
   --navy2: #0d2a45;
@@ -20,7 +15,6 @@
   --muted: #607080;
   --line: #dfe6ec;
 }
-
 
 /* =========================================================
    RESET
@@ -36,18 +30,10 @@ html {
 
 body {
   margin: 0;
-
-  font-family:
-    Inter,
-    Arial,
-    Helvetica,
-    sans-serif;
-
+  font-family: Inter, Arial, Helvetica, sans-serif;
   color: var(--text);
   background: var(--white);
-
   line-height: 1.6;
-
   overflow-x: hidden;
 }
 
@@ -66,7 +52,6 @@ textarea {
   font: inherit;
 }
 
-
 /* =========================================================
    CONTAINER
    ========================================================= */
@@ -76,7 +61,6 @@ textarea {
   margin: 0 auto;
 }
 
-
 /* =========================================================
    HEADER
    ========================================================= */
@@ -85,37 +69,22 @@ textarea {
   position: sticky;
   top: 0;
   z-index: 1000;
-
   background: rgba(255, 255, 255, 0.98);
-
-  border-bottom:
-    1px solid var(--line);
-
-  box-shadow:
-    0 2px 12px rgba(7, 26, 45, 0.05);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 2px 12px rgba(7, 26, 45, 0.05);
 }
 
 .nav-wrap {
   min-height: 82px;
-
   display: flex;
   align-items: center;
-
   gap: 30px;
 }
 
-
-/* =========================================================
-   HEADER LOGO
-   ========================================================= */
-
 .brand {
   display: flex;
-
   align-items: center;
-
   flex-shrink: 0;
-
   text-decoration: none;
 }
 
@@ -124,40 +93,28 @@ textarea {
   height: auto;
 }
 
-
 /* =========================================================
    NAVIGATION
    ========================================================= */
 
 .nav {
   margin-left: auto;
-
   display: flex;
-
   align-items: center;
-
   gap: 27px;
 }
 
 .nav > a,
 .nav-parent {
   display: inline-flex;
-
   align-items: center;
-
   gap: 6px;
-
   text-decoration: none;
-
   color: var(--text);
-
   font-size: 14px;
   font-weight: 700;
-
   white-space: nowrap;
-
-  transition:
-    color 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .nav > a:hover,
@@ -165,16 +122,13 @@ textarea {
   color: var(--red);
 }
 
-
 /* =========================================================
    DROPDOWN
    ========================================================= */
 
 .nav-dropdown {
   position: relative;
-
   display: flex;
-
   align-items: center;
 }
 
@@ -184,86 +138,48 @@ textarea {
 
 .dropdown-arrow {
   font-size: 8px;
-
-  transition:
-    transform 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 .dropdown-menu {
   position: absolute;
-
   top: calc(100% + 16px);
-
   left: 50%;
-
-  transform:
-    translateX(-50%)
-    translateY(8px);
-
+  transform: translateX(-50%) translateY(8px);
   width: 285px;
-
   background: var(--white);
-
-  border:
-    1px solid var(--line);
-
+  border: 1px solid var(--line);
   border-radius: 9px;
-
   padding: 8px;
-
-  box-shadow:
-    0 18px 45px
-    rgba(7, 26, 45, 0.16);
-
+  box-shadow: 0 18px 45px rgba(7, 26, 45, 0.16);
   opacity: 0;
-
   visibility: hidden;
-
   pointer-events: none;
-
   transition:
     opacity 0.2s ease,
     transform 0.2s ease,
     visibility 0.2s ease;
-
   z-index: 2000;
 }
 
 .dropdown-menu::before {
   content: "";
-
   position: absolute;
-
   top: -6px;
-
   left: 50%;
-
   width: 11px;
   height: 11px;
-
   background: var(--white);
-
-  border-left:
-    1px solid var(--line);
-
-  border-top:
-    1px solid var(--line);
-
-  transform:
-    translateX(-50%)
-    rotate(45deg);
+  border-left: 1px solid var(--line);
+  border-top: 1px solid var(--line);
+  transform: translateX(-50%) rotate(45deg);
 }
 
 .dropdown-menu a {
   display: block;
-
   text-decoration: none;
-
-  padding:
-    14px 15px;
-
+  padding: 14px 15px;
   border-radius: 6px;
-
   transition:
     background 0.2s ease,
     transform 0.2s ease;
@@ -271,30 +187,21 @@ textarea {
 
 .dropdown-menu a:hover {
   background: #f5f7fa;
-
-  transform:
-    translateX(3px);
+  transform: translateX(3px);
 }
 
 .dropdown-menu strong {
   display: block;
-
   color: var(--text);
-
   font-size: 14px;
-
   font-weight: 750;
-
   margin-bottom: 3px;
 }
 
 .dropdown-menu small {
   display: block;
-
   color: var(--muted);
-
   font-size: 12px;
-
   line-height: 1.45;
 }
 
@@ -305,21 +212,14 @@ textarea {
 .nav-dropdown:hover .dropdown-menu,
 .nav-dropdown:focus-within .dropdown-menu {
   opacity: 1;
-
   visibility: visible;
-
   pointer-events: auto;
-
-  transform:
-    translateX(-50%)
-    translateY(0);
+  transform: translateX(-50%) translateY(0);
 }
 
 .nav-dropdown:hover .dropdown-arrow {
-  transform:
-    rotate(180deg);
+  transform: rotate(180deg);
 }
-
 
 /* =========================================================
    CALL BUTTON
@@ -327,27 +227,16 @@ textarea {
 
 .nav-cta {
   display: inline-flex;
-
   align-items: center;
   justify-content: center;
-
   min-height: 48px;
-
-  padding:
-    0 22px;
-
+  padding: 0 22px;
   background: var(--navy);
-
   color: var(--white);
-
   border-radius: 6px;
-
   text-decoration: none;
-
   font-size: 14px;
-
   font-weight: 750;
-
   transition:
     background 0.2s ease,
     transform 0.2s ease;
@@ -355,11 +244,8 @@ textarea {
 
 .nav-cta:hover {
   background: var(--red);
-
-  transform:
-    translateY(-1px);
+  transform: translateY(-1px);
 }
-
 
 /* =========================================================
    MOBILE MENU
@@ -367,20 +253,13 @@ textarea {
 
 .menu-btn {
   display: none;
-
   margin-left: auto;
-
   border: 0;
-
   background: transparent;
-
   color: var(--navy);
-
   font-size: 25px;
-
   cursor: pointer;
 }
-
 
 /* =========================================================
    HERO
@@ -388,13 +267,9 @@ textarea {
 
 .hero {
   position: relative;
-
   min-height: 650px;
-
   display: flex;
-
   align-items: center;
-
   overflow: hidden;
 
   background:
@@ -403,13 +278,11 @@ textarea {
       rgba(150, 50, 100, 0.20),
       transparent 32%
     ),
-
     radial-gradient(
       circle at 72% 90%,
       rgba(25, 90, 140, 0.22),
       transparent 35%
     ),
-
     linear-gradient(
       120deg,
       #061a2c,
@@ -422,34 +295,24 @@ textarea {
 
 .hero::after {
   content: "";
-
   position: absolute;
-
   width: 650px;
   height: 650px;
-
   right: -150px;
   top: -180px;
 
-  border:
-    1px solid
-    rgba(255,255,255,0.05);
-
+  border: 1px solid rgba(255,255,255,0.05);
   border-radius: 50%;
 
   box-shadow:
-    0 0 0 100px
-    rgba(255,255,255,0.015),
-
-    0 0 0 200px
-    rgba(255,255,255,0.01);
+    0 0 0 100px rgba(255,255,255,0.015),
+    0 0 0 200px rgba(255,255,255,0.01);
 
   pointer-events: none;
 }
 
 .hero-overlay {
   position: absolute;
-
   inset: 0;
 
   background:
@@ -464,38 +327,24 @@ textarea {
 
 .hero-content {
   position: relative;
-
   z-index: 2;
-
-  padding:
-    90px 0 70px;
+  padding: 90px 0 70px;
 }
 
 .eyebrow {
   margin-bottom: 22px;
-
   color: #dce9f4;
-
   font-size: 13px;
-
   font-weight: 800;
-
   letter-spacing: 3px;
 }
 
 .hero h1 {
   max-width: 800px;
-
-  margin:
-    0 0 25px;
-
-  font-size:
-    clamp(58px, 7vw, 88px);
-
+  margin: 0 0 25px;
+  font-size: clamp(58px, 7vw, 88px);
   line-height: 0.98;
-
   letter-spacing: -3px;
-
   font-weight: 800;
 }
 
@@ -505,17 +354,11 @@ textarea {
 
 .hero p {
   max-width: 720px;
-
-  margin:
-    0 0 30px;
-
+  margin: 0 0 30px;
   color: #d9e4ed;
-
   font-size: 18px;
-
   line-height: 1.7;
 }
-
 
 /* =========================================================
    BUTTONS
@@ -523,36 +366,22 @@ textarea {
 
 .hero-actions {
   display: flex;
-
   flex-wrap: wrap;
-
   gap: 12px;
-
   margin-bottom: 55px;
 }
 
 .btn {
   display: inline-flex;
-
   align-items: center;
   justify-content: center;
-
   min-height: 52px;
-
-  padding:
-    0 24px;
-
+  padding: 0 24px;
   border-radius: 6px;
-
   text-decoration: none;
-
-  border:
-    1px solid transparent;
-
+  border: 1px solid transparent;
   font-size: 14px;
-
   font-weight: 800;
-
   cursor: pointer;
 
   transition:
@@ -562,13 +391,11 @@ textarea {
 }
 
 .btn:hover {
-  transform:
-    translateY(-2px);
+  transform: translateY(-2px);
 }
 
 .btn.primary {
   background: var(--red);
-
   color: var(--white);
 }
 
@@ -578,21 +405,14 @@ textarea {
 
 .btn.ghost {
   background: transparent;
-
   color: var(--white);
-
-  border-color:
-    rgba(255,255,255,0.55);
+  border-color: rgba(255,255,255,0.55);
 }
 
 .btn.ghost:hover {
-  background:
-    rgba(255,255,255,0.08);
-
-  border-color:
-    rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.8);
 }
-
 
 /* =========================================================
    HERO TRUST
@@ -600,25 +420,16 @@ textarea {
 
 .hero-trust {
   display: grid;
-
-  grid-template-columns:
-    repeat(3, 1fr);
-
+  grid-template-columns: repeat(3, 1fr);
   max-width: 760px;
 
-  border-top:
-    1px solid
-    rgba(255,255,255,0.14);
-
+  border-top: 1px solid rgba(255,255,255,0.14);
   padding-top: 22px;
 }
 
 .hero-trust > div {
   padding-right: 20px;
-
-  border-right:
-    1px solid
-    rgba(255,255,255,0.12);
+  border-right: 1px solid rgba(255,255,255,0.12);
 }
 
 .hero-trust > div:not(:first-child) {
@@ -631,77 +442,55 @@ textarea {
 
 .hero-trust strong {
   display: block;
-
   color: var(--white);
-
   font-size: 15px;
 }
 
 .hero-trust span {
   display: block;
-
   margin-top: 3px;
-
   color: #a9bdce;
-
   font-size: 12px;
 }
-
 
 /* =========================================================
    GENERAL SECTIONS
    ========================================================= */
 
 .section {
-  padding:
-    95px 0;
+  padding: 95px 0;
 }
 
 .section.dark {
-  background:
-    linear-gradient(
-      180deg,
-      #071a2d,
-      #081f35
-    );
+  background: linear-gradient(
+    180deg,
+    #071a2d,
+    #081f35
+  );
 
   color: var(--white);
 }
 
 .section-kicker {
   margin-bottom: 13px;
-
   color: var(--red);
-
   font-size: 12px;
-
   font-weight: 850;
-
   letter-spacing: 3px;
 }
 
 .section h2 {
   max-width: 800px;
-
-  margin:
-    0 0 18px;
-
-  font-size:
-    clamp(38px, 5vw, 58px);
-
+  margin: 0 0 18px;
+  font-size: clamp(38px, 5vw, 58px);
   line-height: 1.05;
-
   letter-spacing: -1.5px;
 }
 
 .section-intro {
   max-width: 700px;
-
-  margin:
-    0 0 40px;
-
+  margin: 0 0 40px;
   color: var(--muted);
-
   font-size: 17px;
 }
 
@@ -709,30 +498,22 @@ textarea {
   color: #b5c7d8;
 }
 
-
 /* =========================================================
    TWO COLUMN
    ========================================================= */
 
 .two-col {
   display: grid;
-
-  grid-template-columns:
-    1.05fr 0.95fr;
-
+  grid-template-columns: 1.05fr 0.95fr;
   gap: 80px;
-
   align-items: center;
 }
 
 .two-col p {
   max-width: 680px;
-
   color: var(--muted);
-
   font-size: 16px;
 }
-
 
 /* =========================================================
    ABOUT CARD
@@ -740,12 +521,8 @@ textarea {
 
 .about-card {
   padding: 42px;
-
   background: var(--light);
-
-  border:
-    1px solid var(--line);
-
+  border: 1px solid var(--line);
   border-radius: 12px;
 }
 
@@ -754,40 +531,31 @@ textarea {
   height: 58px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
   margin-bottom: 22px;
 
   background: var(--navy);
-
   color: var(--white);
-
   border-radius: 8px;
 
   font-weight: 900;
-
   font-size: 18px;
 }
 
 .about-card h3 {
-  margin:
-    0 0 12px;
-
+  margin: 0 0 12px;
   font-size: 25px;
 }
 
 .about-card p {
-  margin:
-    0 0 20px;
+  margin: 0 0 20px;
 }
 
 .about-card ul {
   margin: 0;
-
   padding-left: 20px;
-
   color: var(--muted);
 }
 
@@ -795,20 +563,15 @@ textarea {
   margin-bottom: 8px;
 }
 
-
 /* =========================================================
    TEXT LINK
    ========================================================= */
 
 .text-link {
   display: inline-block;
-
   margin-top: 12px;
-
   color: var(--red);
-
   font-weight: 800;
-
   text-decoration: none;
 }
 
@@ -816,32 +579,23 @@ textarea {
   text-decoration: underline;
 }
 
-
 /* =========================================================
    PRODUCT CATEGORY GRID
    ========================================================= */
 
 .category-grid {
   display: grid;
-
-  grid-template-columns:
-    repeat(2, 1fr);
-
+  grid-template-columns: repeat(2, 1fr);
   gap: 22px;
 }
 
 .category-card {
   display: block;
-
   overflow: hidden;
 
-  background:
-    rgba(255,255,255,0.045);
+  background: rgba(255,255,255,0.045);
 
-  border:
-    1px solid
-    rgba(255,255,255,0.15);
-
+  border: 1px solid rgba(255,255,255,0.15);
   border-radius: 10px;
 
   text-decoration: none;
@@ -853,27 +607,26 @@ textarea {
 }
 
 .category-card:hover {
-  transform:
-    translateY(-5px);
+  transform: translateY(-5px);
 
-  border-color:
-    rgba(231,25,32,0.65);
+  border-color: rgba(231,25,32,0.65);
 
   box-shadow:
-    0 18px 40px
-    rgba(0,0,0,0.20);
+    0 18px 40px rgba(0,0,0,0.20);
 }
+
+/* =========================================================
+   PRODUCT IMAGE AREA
+   ========================================================= */
 
 .category-image {
   height: 280px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
   padding: 30px;
-
   overflow: hidden;
 
   background:
@@ -884,26 +637,88 @@ textarea {
     );
 }
 
-.category-image img {
-  width: 90%;
+/* =========================================================
+   PRODUCT IMAGE CAROUSEL
+   INDUSTRIAL = 2 IMAGES
+   DOMESTIC & AGRI = 4 IMAGES
 
-  max-height: 240px;
+   Images automatically change every 3 seconds
+   through the JavaScript in index.html.
+   ========================================================= */
+
+.category-carousel {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.category-carousel .carousel-slide {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 90%;
+  height: 90%;
+
+  max-width: 100%;
+  max-height: 100%;
 
   object-fit: contain;
 
-  transition:
-    transform 0.35s ease;
-}
-
-.category-card:hover
-.category-image img {
   transform:
-    scale(1.04);
+    translate(-50%, -50%)
+    scale(0.985);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity 0.75s ease,
+    transform 0.75s ease,
+    visibility 0.75s ease;
+
+  pointer-events: none;
 }
 
+.category-carousel .carousel-slide.is-active {
+  opacity: 1;
+  visibility: visible;
+
+  transform:
+    translate(-50%, -50%)
+    scale(1);
+}
+
+/* Industrial pump images */
+.industrial-carousel .carousel-slide {
+  width: 92%;
+  height: 92%;
+}
+
+/* Domestic / Agri pump images */
+.domestic-carousel .carousel-slide {
+  width: 90%;
+  height: 90%;
+}
+
+/* Slight zoom when user hovers over product card */
+.category-card:hover
+.category-carousel .carousel-slide.is-active {
+  transform:
+    translate(-50%, -50%)
+    scale(1.035);
+}
 
 /* =========================================================
-   DOMESTIC PLACEHOLDER
+   DOMESTIC PREVIEW BACKGROUND
    ========================================================= */
 
 .domestic-preview {
@@ -913,132 +728,67 @@ textarea {
       rgba(30,100,150,0.25),
       transparent 50%
     ),
-
     #0b2339;
 }
-
-.category-placeholder {
-  text-align: center;
-
-  opacity: 0.9;
-}
-
-.category-placeholder span {
-  display: block;
-
-  margin-bottom: 8px;
-
-  color: #dbe6ef;
-
-  font-size: 12px;
-
-  font-weight: 800;
-
-  letter-spacing: 3px;
-}
-
-.category-placeholder strong {
-  display: block;
-
-  color: white;
-
-  font-size: 28px;
-}
-
-.category-placeholder small {
-  display: block;
-
-  margin-top: 6px;
-
-  color: #9fb5c7;
-
-  font-size: 13px;
-}
-
 
 /* =========================================================
    PRODUCT CONTENT
    ========================================================= */
 
 .category-content {
-  padding:
-    28px 30px 32px;
+  padding: 28px 30px 32px;
 }
 
 .product-badge {
   display: inline-block;
-
   margin-bottom: 10px;
-
   color: #ff6970;
-
   font-size: 11px;
-
   font-weight: 850;
-
   letter-spacing: 2px;
 }
 
 .category-content h3 {
-  margin:
-    0 0 10px;
-
+  margin: 0 0 10px;
   color: var(--white);
-
   font-size: 24px;
-
   line-height: 1.2;
 }
 
 .category-content p {
   margin: 0;
-
   color: #afc2d3;
-
   font-size: 14px;
-
   line-height: 1.7;
 }
-
 
 /* =========================================================
    SERVICES
    ========================================================= */
 
 .service-section {
-  background:
-    #f5f7f9;
+  background: #f5f7f9;
 }
 
 .service-cards {
   display: grid;
-
-  grid-template-columns:
-    repeat(2, 1fr);
-
+  grid-template-columns: repeat(2, 1fr);
   gap: 22px;
-
   margin-top: 40px;
 }
 
 .service-card {
   position: relative;
-
   display: block;
-
   min-height: 270px;
-
   padding: 38px;
 
   background: var(--white);
 
-  border:
-    1px solid var(--line);
-
+  border: 1px solid var(--line);
   border-radius: 10px;
 
   text-decoration: none;
-
   overflow: hidden;
 
   transition:
@@ -1053,37 +803,30 @@ textarea {
   position: absolute;
 
   right: -80px;
-
   bottom: -100px;
 
   width: 230px;
-
   height: 230px;
 
   border-radius: 50%;
 
-  background:
-    rgba(231,25,32,0.05);
+  background: rgba(231,25,32,0.05);
 
   transition:
     transform 0.3s ease;
 }
 
 .service-card:hover {
-  transform:
-    translateY(-5px);
+  transform: translateY(-5px);
 
-  border-color:
-    rgba(231,25,32,0.35);
+  border-color: rgba(231,25,32,0.35);
 
   box-shadow:
-    0 18px 40px
-    rgba(7,26,45,0.10);
+    0 18px 40px rgba(7,26,45,0.10);
 }
 
 .service-card:hover::after {
-  transform:
-    scale(1.3);
+  transform: scale(1.3);
 }
 
 .featured-service {
@@ -1095,49 +838,36 @@ textarea {
     );
 
   color: var(--white);
-
-  border-color:
-    #123e67;
+  border-color: #123e67;
 }
 
 .service-number {
   display: block;
-
   margin-bottom: 40px;
-
   color: var(--red);
-
   font-size: 13px;
-
   font-weight: 900;
-
   letter-spacing: 2px;
 }
 
 .service-card h3 {
   position: relative;
-
   z-index: 2;
 
-  margin:
-    0 0 12px;
+  margin: 0 0 12px;
 
   font-size: 26px;
-
   line-height: 1.2;
 }
 
 .service-card p {
   position: relative;
-
   z-index: 2;
 
   max-width: 580px;
-
   margin: 0;
 
   color: var(--muted);
-
   line-height: 1.7;
 }
 
@@ -1145,25 +875,19 @@ textarea {
   color: #b7c8d7;
 }
 
-
 /* =========================================================
    CONTACT
    ========================================================= */
 
 .contact-section {
   background: var(--navy);
-
   color: var(--white);
 }
 
 .contact-grid {
   display: grid;
-
-  grid-template-columns:
-    1fr 0.9fr;
-
+  grid-template-columns: 1fr 0.9fr;
   gap: 80px;
-
   align-items: start;
 }
 
@@ -1173,12 +897,9 @@ textarea {
 
 .contact-section > .container > div p {
   max-width: 600px;
-
   color: #b7cadb;
-
   font-size: 16px;
 }
-
 
 /* =========================================================
    CONTACT DETAILS
@@ -1190,38 +911,27 @@ textarea {
 
 .contact-item {
   margin-bottom: 22px;
-
   padding-left: 18px;
-
-  border-left:
-    2px solid var(--red);
+  border-left: 2px solid var(--red);
 }
 
 .contact-item strong {
   display: block;
-
   margin-bottom: 3px;
-
   color: var(--white);
-
   font-size: 16px;
 }
 
 .contact-item small {
   display: block;
-
   margin-bottom: 5px;
-
   color: #9fb5c7;
-
   font-size: 13px;
 }
 
 .contact-details > a {
   color: #e6eef5;
-
   text-decoration: none;
-
   font-weight: 700;
 }
 
@@ -1229,17 +939,13 @@ textarea {
   color: var(--red);
 }
 
-
 /* =========================================================
    CONTACT FORM
    ========================================================= */
 
 .contact-form {
   display: grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
+  grid-template-columns: 1fr 1fr;
   gap: 12px;
 }
 
@@ -1247,19 +953,15 @@ textarea {
 .contact-form textarea {
   width: 100%;
 
-  border:
-    1px solid
-    rgba(255,255,255,0.16);
+  border: 1px solid rgba(255,255,255,0.16);
 
-  background:
-    rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.06);
 
   color: var(--white);
 
   border-radius: 5px;
 
-  padding:
-    14px 15px;
+  padding: 14px 15px;
 
   outline: none;
 
@@ -1270,11 +972,8 @@ textarea {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color:
-    rgba(231,25,32,0.8);
-
-  background:
-    rgba(255,255,255,0.09);
+  border-color: rgba(231,25,32,0.8);
+  background: rgba(255,255,255,0.09);
 }
 
 .contact-form input::placeholder,
@@ -1283,30 +982,24 @@ textarea {
 }
 
 .contact-form textarea {
-  grid-column:
-    1 / -1;
-
+  grid-column: 1 / -1;
   resize: vertical;
-
   min-height: 150px;
 }
 
 .contact-form button {
   border: 0;
-
   min-height: 50px;
 }
 
 .whatsapp {
   display: inline-flex;
-
   align-items: center;
   justify-content: center;
 
   color: #4ee28b;
 
   font-weight: 750;
-
   text-decoration: none;
 
   min-height: 50px;
@@ -1316,61 +1009,44 @@ textarea {
   text-decoration: underline;
 }
 
-
 /* =========================================================
    FOOTER
-   IMPORTANT:
-   SINGLE FOOTER DEFINITION ONLY
    ========================================================= */
 
 .footer {
   position: relative;
 
   width: 100% !important;
-
   height: auto !important;
-
   min-height: 0 !important;
 
-  background:
-    #061522 !important;
+  background: #061522 !important;
 
   color: #b8c8d5;
 
-  padding:
-    28px 0 !important;
+  padding: 28px 0 !important;
 
   margin: 0 !important;
 
   overflow: hidden !important;
 
   border-top:
-    1px solid
-    rgba(255,255,255,0.05);
+    1px solid rgba(255,255,255,0.05);
 }
-
-
-/* =========================================================
-   FOOTER WRAPPER
-   ========================================================= */
 
 .footer .footer-wrap {
   width: min(1160px, 92%) !important;
 
   min-height: 70px !important;
-
   height: 70px !important;
 
   margin: 0 auto !important;
-
   padding: 0 !important;
 
   display: grid !important;
 
   grid-template-columns:
-    1fr
-    1fr
-    1fr !important;
+    1fr 1fr 1fr !important;
 
   align-items: center !important;
 
@@ -1379,12 +1055,8 @@ textarea {
   gap: 30px !important;
 }
 
-
 /* =========================================================
-   FOOTER LOGO CONTAINER
-   SUPPORTS BOTH:
-   .footer-logo
-   .footer-brand
+   FOOTER LOGO
    ========================================================= */
 
 .footer .footer-logo,
@@ -1392,32 +1064,24 @@ textarea {
   position: relative !important;
 
   display: flex !important;
-
   align-items: center !important;
-
   justify-content: flex-start !important;
 
   width: 125px !important;
-
   height: 55px !important;
 
   min-width: 125px !important;
-
   min-height: 55px !important;
 
   max-width: 125px !important;
-
   max-height: 55px !important;
 
   margin: 0 !important;
-
   padding: 0 !important;
 
-  background:
-    transparent !important;
+  background: transparent !important;
 
   border: 0 !important;
-
   border-radius: 0 !important;
 
   box-shadow: none !important;
@@ -1425,46 +1089,32 @@ textarea {
   overflow: hidden !important;
 }
 
-
-/* =========================================================
-   FOOTER LOGO IMAGE
-   HARD SIZE LIMIT
-   ========================================================= */
-
 .footer .footer-logo img,
 .footer .footer-brand img {
   display: block !important;
 
   width: 125px !important;
-
   height: 55px !important;
 
   min-width: 125px !important;
-
   min-height: 0 !important;
 
   max-width: 125px !important;
-
   max-height: 55px !important;
 
   margin: 0 !important;
-
   padding: 0 !important;
 
   object-fit: contain !important;
-
   object-position: left center !important;
 
-  background:
-    transparent !important;
+  background: transparent !important;
 
   border: 0 !important;
-
   border-radius: 0 !important;
 
   box-shadow: none !important;
 }
-
 
 /* =========================================================
    FOOTER COPYRIGHT
@@ -1472,27 +1122,19 @@ textarea {
 
 .footer .footer-wrap p {
   width: auto !important;
-
   height: auto !important;
-
   min-height: 0 !important;
 
   margin: 0 !important;
-
   padding: 0 !important;
 
-  color:
-    rgba(255,255,255,0.75) !important;
+  color: rgba(255,255,255,0.75) !important;
 
-  font-size:
-    13px !important;
-
+  font-size: 13px !important;
   line-height: 1.5 !important;
 
-  text-align:
-    center !important;
+  text-align: center !important;
 }
-
 
 /* =========================================================
    FOOTER EMAIL
@@ -1502,37 +1144,25 @@ textarea {
   display: block !important;
 
   width: auto !important;
-
   height: auto !important;
 
   margin: 0 !important;
-
   padding: 0 !important;
 
-  color:
-    #ffffff !important;
+  color: #ffffff !important;
 
-  font-size:
-    13px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  line-height: 1.5 !important;
 
-  font-weight:
-    600 !important;
+  text-align: right !important;
 
-  line-height:
-    1.5 !important;
-
-  text-align:
-    right !important;
-
-  text-decoration:
-    none !important;
+  text-decoration: none !important;
 }
 
 .footer .footer-email:hover {
-  color:
-    #ed1c24 !important;
+  color: #ed1c24 !important;
 }
-
 
 /* =========================================================
    FLOATING WHATSAPP
@@ -1542,47 +1172,38 @@ textarea {
   position: fixed;
 
   right: 24px;
-
   bottom: 24px;
 
   z-index: 1200;
 
   width: 58px;
-
   height: 58px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
   border-radius: 50%;
 
-  background:
-    #159447;
+  background: #159447;
 
-  color:
-    var(--white);
+  color: var(--white);
 
   text-decoration: none;
 
   font-size: 16px;
-
   font-weight: 900;
 
   box-shadow:
-    0 8px 22px
-    rgba(0,0,0,0.20);
+    0 8px 22px rgba(0,0,0,0.20);
 
   transition:
     transform 0.2s ease;
 }
 
 .floating-whatsapp:hover {
-  transform:
-    scale(1.08);
+  transform: scale(1.08);
 }
-
 
 /* =========================================================
    TABLET
@@ -1595,32 +1216,23 @@ textarea {
   }
 
   .nav-cta {
-    padding:
-      0 17px;
+    padding: 0 17px;
   }
 
   .two-col {
-    grid-template-columns:
-      1fr;
-
-    gap:
-      45px;
+    grid-template-columns: 1fr;
+    gap: 45px;
   }
 
   .contact-grid {
-    grid-template-columns:
-      1fr;
-
-    gap:
-      45px;
+    grid-template-columns: 1fr;
+    gap: 45px;
   }
 
   .hero h1 {
-    font-size:
-      clamp(52px, 9vw, 76px);
+    font-size: clamp(52px, 9vw, 76px);
   }
 }
-
 
 /* =========================================================
    MOBILE
@@ -1629,388 +1241,273 @@ textarea {
 @media (max-width: 768px) {
 
   .nav-wrap {
-    min-height:
-      72px;
+    min-height: 72px;
   }
 
   .brand img {
-    width:
-      90px;
+    width: 90px;
   }
 
   .menu-btn {
-    display:
-      block;
+    display: block;
   }
 
   .nav {
-    position:
-      absolute;
+    position: absolute;
 
-    top:
-      72px;
+    top: 72px;
+    left: 0;
+    right: 0;
 
-    left:
-      0;
+    display: none;
 
-    right:
-      0;
+    flex-direction: column;
+    align-items: stretch;
 
-    display:
-      none;
+    gap: 0;
 
-    flex-direction:
-      column;
+    padding: 12px 5% 18px;
 
-    align-items:
-      stretch;
+    background: var(--white);
 
-    gap:
-      0;
-
-    padding:
-      12px 5% 18px;
-
-    background:
-      var(--white);
-
-    border-bottom:
-      1px solid var(--line);
+    border-bottom: 1px solid var(--line);
 
     box-shadow:
-      0 15px 30px
-      rgba(7,26,45,0.10);
+      0 15px 30px rgba(7,26,45,0.10);
   }
 
   .nav.open {
-    display:
-      flex;
+    display: flex;
   }
 
   .nav > a,
   .nav-parent {
-    width:
-      100%;
-
-    padding:
-      13px 0;
+    width: 100%;
+    padding: 13px 0;
   }
 
   .nav-dropdown {
-    width:
-      100%;
-
-    display:
-      block;
+    width: 100%;
+    display: block;
   }
 
   .nav-parent {
-    justify-content:
-      space-between;
+    justify-content: space-between;
   }
-
 
   /* ---------------------------------------------------------
      MOBILE DROPDOWN
      --------------------------------------------------------- */
 
   .dropdown-menu {
-    position:
-      static;
+    position: static;
 
-    width:
-      100%;
+    width: 100%;
 
-    transform:
-      none;
+    transform: none;
 
-    margin:
-      0 0 5px;
+    margin: 0 0 5px;
 
-    padding:
-      4px 0;
+    padding: 4px 0;
 
-    background:
-      #f5f7f9;
+    background: #f5f7f9;
 
-    border:
-      0;
+    border: 0;
 
-    border-radius:
-      6px;
+    border-radius: 6px;
 
-    box-shadow:
-      none;
+    box-shadow: none;
 
-    opacity:
-      1;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 
-    visibility:
-      visible;
-
-    pointer-events:
-      auto;
-
-    display:
-      none;
+    display: none;
   }
 
   .dropdown-menu::before {
-    display:
-      none;
+    display: none;
   }
 
-  .nav-dropdown:hover
-  .dropdown-menu {
-    display:
-      none;
+  .nav-dropdown:hover .dropdown-menu {
+    display: none;
   }
 
-  .nav-dropdown:focus-within
-  .dropdown-menu {
-    display:
-      block;
+  .nav-dropdown:focus-within .dropdown-menu {
+    display: block;
   }
 
   .dropdown-menu a {
-    padding:
-      12px 15px;
+    padding: 12px 15px;
   }
 
   .nav-cta {
-    display:
-      none;
+    display: none;
   }
-
 
   /* ---------------------------------------------------------
      HERO
      --------------------------------------------------------- */
 
   .hero {
-    min-height:
-      auto;
+    min-height: auto;
   }
 
   .hero-content {
-    padding:
-      75px 0 55px;
+    padding: 75px 0 55px;
   }
 
   .hero h1 {
-    font-size:
-      clamp(48px, 13vw, 68px);
-
-    letter-spacing:
-      -2px;
+    font-size: clamp(48px, 13vw, 68px);
+    letter-spacing: -2px;
   }
 
   .hero p {
-    font-size:
-      16px;
+    font-size: 16px;
   }
 
   .hero-trust {
-    grid-template-columns:
-      1fr;
-
-    gap:
-      18px;
+    grid-template-columns: 1fr;
+    gap: 18px;
   }
 
   .hero-trust > div,
   .hero-trust > div:not(:first-child) {
+    padding: 0 0 15px;
 
-    padding:
-      0 0 15px;
-
-    border-right:
-      0;
+    border-right: 0;
 
     border-bottom:
-      1px solid
-      rgba(255,255,255,0.12);
+      1px solid rgba(255,255,255,0.12);
   }
 
   .hero-trust > div:last-child {
-    border-bottom:
-      0;
+    border-bottom: 0;
   }
-
 
   /* ---------------------------------------------------------
      SECTIONS
      --------------------------------------------------------- */
 
   .section {
-    padding:
-      70px 0;
+    padding: 70px 0;
   }
 
   .section h2 {
-    font-size:
-      clamp(36px, 10vw, 52px);
+    font-size: clamp(36px, 10vw, 52px);
   }
-
 
   /* ---------------------------------------------------------
      PRODUCTS
      --------------------------------------------------------- */
 
   .category-grid {
-    grid-template-columns:
-      1fr;
+    grid-template-columns: 1fr;
   }
 
   .category-image {
-    height:
-      240px;
+    height: 240px;
   }
 
+  .category-carousel .carousel-slide {
+    width: 88%;
+    height: 88%;
+  }
 
   /* ---------------------------------------------------------
      SERVICES
      --------------------------------------------------------- */
 
   .service-cards {
-    grid-template-columns:
-      1fr;
+    grid-template-columns: 1fr;
   }
 
   .service-card {
-    min-height:
-      240px;
-
-    padding:
-      30px;
+    min-height: 240px;
+    padding: 30px;
   }
-
 
   /* ---------------------------------------------------------
      CONTACT
      --------------------------------------------------------- */
 
   .contact-form {
-    grid-template-columns:
-      1fr;
+    grid-template-columns: 1fr;
   }
 
   .contact-form textarea {
-    grid-column:
-      auto;
+    grid-column: auto;
   }
 
-
-  /* =========================================================
+  /* ---------------------------------------------------------
      MOBILE FOOTER
-     ========================================================= */
+     --------------------------------------------------------- */
 
   .footer {
-    padding:
-      25px 0 !important;
+    padding: 25px 0 !important;
   }
 
   .footer .footer-wrap {
-    width:
-      min(92%, 500px) !important;
+    width: min(92%, 500px) !important;
 
-    height:
-      auto !important;
+    height: auto !important;
+    min-height: auto !important;
 
-    min-height:
-      auto !important;
+    display: flex !important;
 
-    display:
-      flex !important;
+    flex-direction: column !important;
 
-    flex-direction:
-      column !important;
+    align-items: center !important;
+    justify-content: center !important;
 
-    align-items:
-      center !important;
+    gap: 16px !important;
 
-    justify-content:
-      center !important;
-
-    gap:
-      16px !important;
-
-    text-align:
-      center !important;
+    text-align: center !important;
   }
 
   .footer .footer-logo,
   .footer .footer-brand {
-    width:
-      115px !important;
+    width: 115px !important;
+    height: 55px !important;
 
-    height:
-      55px !important;
+    min-width: 115px !important;
+    min-height: 55px !important;
 
-    min-width:
-      115px !important;
+    max-width: 115px !important;
+    max-height: 55px !important;
 
-    min-height:
-      55px !important;
+    justify-content: center !important;
 
-    max-width:
-      115px !important;
-
-    max-height:
-      55px !important;
-
-    justify-content:
-      center !important;
-
-    overflow:
-      hidden !important;
+    overflow: hidden !important;
   }
 
   .footer .footer-logo img,
   .footer .footer-brand img {
-    width:
-      115px !important;
+    width: 115px !important;
+    height: 55px !important;
 
-    height:
-      55px !important;
+    min-width: 115px !important;
+    max-width: 115px !important;
 
-    min-width:
-      115px !important;
+    max-height: 55px !important;
 
-    max-width:
-      115px !important;
-
-    max-height:
-      55px !important;
-
-    object-position:
-      center center !important;
+    object-position: center center !important;
   }
 
   .footer .footer-wrap p,
   .footer .footer-email {
-    text-align:
-      center !important;
-
-    font-size:
-      12px !important;
+    text-align: center !important;
+    font-size: 12px !important;
   }
 
   .floating-whatsapp {
-    right:
-      18px;
+    right: 18px;
+    bottom: 18px;
 
-    bottom:
-      18px;
-
-    width:
-      54px;
-
-    height:
-      54px;
+    width: 54px;
+    height: 54px;
   }
 }
-
 
 /* =========================================================
    SMALL MOBILE
@@ -2019,25 +1516,19 @@ textarea {
 @media (max-width: 480px) {
 
   .hero-actions {
-    flex-direction:
-      column;
-
-    align-items:
-      stretch;
+    flex-direction: column;
+    align-items: stretch;
   }
 
   .hero-actions .btn {
-    width:
-      100%;
+    width: 100%;
   }
 
   .category-content {
-    padding:
-      24px;
+    padding: 24px;
   }
 
   .about-card {
-    padding:
-      28px;
+    padding: 28px;
   }
 }
